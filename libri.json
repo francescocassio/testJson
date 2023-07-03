@@ -1,0 +1,27 @@
+[
+    {
+      "autore": "Harper Lee",
+      "genere": "Romanzo",
+      "titolo": "Il buio oltre la siepe"
+    },
+    {
+      "autore": "George Orwell",
+      "genere": "Romanzo distopico",
+      "titolo": "1984"
+    }, 
+    {
+      "autore": "J.R.R. Tolkien",
+      "genere": "Fantasy",
+      "titolo": "Il Signore degli Anelli"
+    },
+    {
+      "autore": "Jane Austen",
+      "genere": "Romanzo",
+      "titolo": "Orgoglio e pregiudizio"
+    },
+    {
+      "autore": "Fyodor Dostoevsky",
+      "genere": "Romanzo",
+      "titolo": "Delitto e castigo"
+    }
+  ]
