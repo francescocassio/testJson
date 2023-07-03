@@ -1,11 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+
+    <h1 id="title"></h1>
+    <ul id="lista">
+
+    </ul>
+
+    <button onclick="mostra()">clicca qui1</button>
+    <button onclick="mostra2()">clicca qui2</button>
+    <button onclick="mostra3()">clicca qui3</button>
+    <button onclick="mostra4()">clicca qui4</button>
+
+
+    <script>
+
+        function mostra() {
+            listaPietanze = ["pane", "pizza", "pasta", "fagioli"];
+            title.innerHTML = "CIAO";
+
+            s = "";
+
+            for (piatto of listaPietanze) {
+                s += "<li>" + piatto + "</li>";
+            }
+
+            console.log(s);
+
+            lista.innerHTML = s;
+        }
+
+        function mostra2() {
+
+            fetch("libri.json")
+                .then(res => res.json())
+                .then(oggettoJS => {
+                    s = "";
+                    for (piatto of oggettoJS) {
+                        s += "<li>" + piatto.titolo + "</li>";
+                    }
+                    console.log(s);
+
+                    lista.innerHTML = s;
+
+                });
+
+        }
+
+        function mostra3() {
+
+            fetch("aree.json")
+                .then(res => res.json())
+                .then(oggettoJS => {
+                    console.log(oggettoJS);
+                    s = "";
+                    for (piatto of oggettoJS) {
+                        s += "<li>" + piatto.LOCALITA + " - " + piatto.COMUNE + "</li>";
+                    }
+                    console.log(s);
+
+                    lista.innerHTML = s;
+
+                });
+
+
+        }
+
+        function mostra4() {
+            console.log("SI");
+
+            listaNomi = [{"nome": "marco", "cognome":"rossi"}, {"nome": "marco", "cognome":"neri"},{"nome": "marco", "cognome":"galli"}];
+            
+            lista2 = [{
+                "ANNO":"2003",
+                "COMUNE":"ALES",
+                "PROVICIA":"ORISTANO",
+                "REGIONE":"Sardegna",
+                "STIR":"ORISTANO",
+                "LOCALITA":"MONTE ZEPPARA",
+                "STAZIONE":"ALES",
+                "TIPO ZONA":"PASCOLO",
+                "AREA":8.07,
+                "DATA":"03/08/2003",
+                "NUMERO INCENDIO":"06",
+                "COMUNE DATO RA":"Ales",
+                "PROVINCIA DATO RA":"Oristano",
+                "PROVINCE AL 2001":"Oristano",
+                "CODICE ISTAT PROVINCIA":"",
+                "IDFEATURE":"1989"
+                },
+                {"ANNO":"2003",
+                "COMUNE":"ALES",
+                "PROVICIA":"ORISTANO",
+                "REGIONE":"Sardegna",
+                "STIR":"ORISTANO",
+                "LOCALITA":"MONTE ZEPPARA",
+                "STAZIONE":"ALES",
+                "TIPO ZONA":"PASCOLO",
+                "AREA":8.07,
+                "DATA":"03/08/2003",
+                "NUMERO INCENDIO":"06",
+                "COMUNE DATO RA":"Ales",
+                "PROVINCIA DATO RA":"Oristano",
+                "PROVINCE AL 2001":"Oristano",
+                "CODICE ISTAT PROVINCIA":"",
+                "IDFEATURE":"1989"
+                },
+                {
+                "ANNO":"2003",
+                "COMUNE":"ALES",
+                "PROVICIA":"ORISTANO",
+                "REGIONE":"Sardegna",
+                "STIR":"ORISTANO",
+                "LOCALITA":"MONTE ZEPPARA",
+                "STAZIONE":"ALES",
+                "TIPO ZONA":"PASCOLO",
+                "AREA":8.07,
+                "DATA":"03/08/2003",
+                "NUMERO INCENDIO":"06",
+                "COMUNE DATO RA":"Ales",
+                "PROVINCIA DATO RA":"Oristano",
+                "PROVINCE AL 2001":"Oristano",
+                "CODICE ISTAT PROVINCIA":"",
+                "IDFEATURE":"1989"
+                }
+            ];
+            s = "";
+
+            console.log(listaNomi);
+            for (elem of lista2) {
+                s += "<li>" + elem.AREA + " - " + elem.COMUNE + "</li>";
+            }
+
+            console.log(s);
+
+            lista.innerHTML = s;
+
+        }
+
+    </script>
 </body>
+
 </html>
